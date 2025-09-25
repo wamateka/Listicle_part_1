@@ -12,11 +12,11 @@ router.get('/', (req,res)=>{
 })
 
 router.get('/:giftId', (req,res)=>{
-    const id = req.params.giftId;
-    const found = startUpList.find(s => String(s.id) === String(id));
-    if (!found) {
-        return res.status(404).sendFile(path.resolve(__dirname, '../public/404.html'));
-    }
+    // const id = req.params.giftId;
+    // const found = startUpList.find(s => String(s.id) === String(id));
+    // if (!found) {
+    //     return res.status(404).sendFile(path.resolve(__dirname, '../public/404.html'));
+    // }
     return res.status(200).sendFile(path.resolve(__dirname, '../public/startUp.html'));
 })
 export default router;
