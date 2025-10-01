@@ -2,14 +2,13 @@ import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import startUpList from '../data/startUpList.js';
+import getStartUps from '../controllers/startUps.js'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const router = express.Router();
 
-router.get('/', (req,res)=>{
-    res.status(200).json(startUpList);
-})
+router.get('/', getStartUps.getStartUps)
 
 router.get('/:giftId', (req,res)=>{
     // const id = req.params.giftId;

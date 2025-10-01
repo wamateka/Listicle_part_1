@@ -74,7 +74,7 @@ function createDetailCard(startup) {
 
   const back = document.createElement('a');
   back.classList.add('btn');
-  back.href = '../index.html';
+  back.href = '/';
   back.textContent = '← Back to list';
   footer.appendChild(back);
 
